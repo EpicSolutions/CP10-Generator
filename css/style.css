@@ -1,0 +1,64 @@
+.nav-pills a {
+	margin: 0 !important;
+}
+
+.controls {
+	position: relative;
+}
+
+.alertBox {
+	height: 36px;
+}
+
+.label {
+	background-color: white !important;
+}
+
+.labelForm {
+	width: 410px;
+	height: 174px;
+	background-image: url('../images/label.png');
+}
+
+.labelForm input {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.labelForm .man {
+	top: 5px;
+	left: 12px;
+	height: 15px;
+	width: 274px;
+}
+
+.labelForm .desc {
+	top: 32px;
+	left: 12px;
+	height: 15px;
+	width: 274px;
+}
+
+.labelForm .units {
+	top: 59px;
+	left: 12px;
+	height: 15px;
+	width: 75px;
+}
+
+.labelForm .size {
+	top: 59px;
+	left: 125px;
+	height: 15px;
+	width: 75px;
+}
+
+.labelForm .price {
+	top: 87px;
+	left: 277px;
+	height: 52px;
+	width: 105px;
+	font-size: 34px;
+}
+
