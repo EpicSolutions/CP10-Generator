@@ -38,7 +38,7 @@
 							</div>
 							<div class="control-group">
 								<div class="controls">
-									<input type="text" class="price" id="price1" name="price" placeholder="Price" />
+									<input type="text" class="price" id="price1" name="price" />
 								</div>
 							</div>
 						</div>

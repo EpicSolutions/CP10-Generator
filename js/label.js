@@ -304,7 +304,7 @@ $(function(){
 					'<div class="control-group">' +
 						'<div class="controls">' +
 							'<input type="text" class="price" id="price' + (count + 1) + 
-								'" name="price' + (count + 1) + '" placeholder="Price" />' +
+								'" name="price' + (count + 1) + '" />' +
 						'</div>' +
 					'</div>' +
 				'</div>' +
