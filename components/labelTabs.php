@@ -3,7 +3,7 @@
 		<li class="active"><a href="#tab1" data-toggle="tab">Form</a></li>
 		<li><a href="#tab2" data-toggle="tab">Upload CSV</a></li>
 	</ul>
-	<div class="tab-content">
+	<div class="tab-content labelContent">
 		<div class="tab-pane active fade in" id="tab1">
 			<form id="labelForm" class="inputForm" action="php/labels.php" method="post">
 				<div class="labels">

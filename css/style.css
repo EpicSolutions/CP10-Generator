@@ -1,3 +1,11 @@
+.logo {
+	width: 150px;	
+}
+
+#logoHolder {
+	margin: 15px 0px 25px;
+}
+
 .nav-pills a {
 	margin: 0 !important;
 }
@@ -6,18 +14,58 @@
 	position: relative;
 }
 
+.tab-content {
+	overflow: visible !important;
+	border: 1px solid #ddd;
+}
+
 .alertBox {
 	height: 36px;
 }
 
+.buttons {
+	clear: both;
+	margin-top: 5px;
+	margin-bottom: 25px;
+}
+
+.nav-tabs {
+	margin-bottom: -1px;
+}
+
+.tabbable {
+	margin: auto;
+}
+
+#uploadForm {
+	margin: auto;
+	width: 450px;
+}
+
+.labelContent {
+	width: 846px;
+}
+
+#labelForm {
+	width: 836px;
+	margin: auto;	
+}
+
+.labelTabs {
+	width: 846px;
+}
+
 .label {
 	background-color: white !important;
+	float: left;
+	margin-top: 5px;
 }
 
 .labelForm {
 	width: 410px;
 	height: 174px;
 	background-image: url('../images/label.png');
+	margin-top: -10px;
 }
 
 .labelForm input {
@@ -62,3 +110,165 @@
 	font-size: 34px;
 }
 
+.labelForm .upc {
+	top: 125px;
+	left: 85px;
+	width: 105px;
+	height: 12px;
+}
+
+.shelfContent {
+	width: 846px;
+}
+
+#shelfForm {
+	width: 768px;
+	margin: auto;	
+}
+
+.shelfTabs {
+	width: 846px;
+}
+
+.shelf {
+	background-color: white !important;
+	float: left;
+	margin-top: 5px;
+	padding: 2px 4px;
+	font-weight: bold;
+	line-height: 14px;
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	white-space: nowrap;
+	vertical-align: baseline;
+}
+
+.shelfForm {
+	width: 376px;
+	height: 282px;
+	background-image: url('../images/shelfTalker.png');
+	margin-top: -10px;
+}
+
+.shelfForm input {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.shelfForm .man {
+	top: 20px;
+	left: 30px;
+	height: 30px;
+	width: 300px;
+	font-size: 12pt;
+	text-align: center;
+}
+
+.shelfForm .desc {
+	top: 65px;
+	left: 100px;
+	height: 15px;
+	width: 255px;
+}
+
+.shelfForm .size {
+	top: 65px;
+	left: 7px;
+	height: 15px;
+	width: 75px;
+}
+
+.shelfForm .price {
+	top: 115px;
+	left: 135px;
+	height: 52px;
+	width: 105px;
+	font-size: 34px;
+}
+
+.shelfForm .upc {
+	top: 250px;
+	left: 120px;
+	width: 105px;
+	height: 12px;
+	text-align: center;
+}
+
+.palletContent {
+	width: 846px;
+}
+
+#palletForm {
+	width: 768px;
+	margin: auto;	
+}
+
+.palletTabs {
+	width: 846px;
+}
+
+.pallet {
+	background-color: white !important;
+	float: left;
+	margin-top: 5px;
+	padding: 2px 4px;
+	font-weight: bold;
+	line-height: 14px;
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	white-space: nowrap;
+	vertical-align: baseline;
+}
+
+.palletForm {
+	width: 376px;
+	height: 282px;
+	background-image: url('../images/shelfTalker.png');
+	margin-top: -10px;
+}
+
+.palletForm input {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.palletForm .man {
+	top: 20px;
+	left: 30px;
+	height: 30px;
+	width: 300px;
+	font-size: 12pt;
+	text-align: center;
+}
+
+.palletForm .desc {
+	top: 65px;
+	left: 100px;
+	height: 15px;
+	width: 255px;
+}
+
+.palletForm .size {
+	top: 65px;
+	left: 7px;
+	height: 15px;
+	width: 75px;
+}
+
+.palletForm .price {
+	top: 115px;
+	left: 135px;
+	height: 52px;
+	width: 105px;
+	font-size: 34px;
+}
+
+.palletForm .upc {
+	top: 250px;
+	left: 120px;
+	width: 105px;
+	height: 12px;
+	text-align: center;
+}

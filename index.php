@@ -18,7 +18,9 @@
 <body>
 	<div class="container-fluid">
 		<div class="row-fluid">
-			
+			<div id="logoHolder">
+				<img class="logo" src="images/logo.png" />
+			</div>
 		</div>
 		<div class="row-fluid">
 			<div class="span2">
@@ -28,7 +30,7 @@
 					<li><a href="#" class="palletButton">Pallet Signs</a></li>
 				</ul>	
 			</div>
-			<div class="span8">
+			<div class="span10">
 				<?php require_once('components/labelTabs.php'); ?>
 				<?php require_once('components/shelfTabs.php'); ?>
 				<?php require_once('components/palletTabs.php'); ?>

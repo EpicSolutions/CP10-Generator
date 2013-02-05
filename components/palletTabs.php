@@ -3,7 +3,7 @@
 		<li class="active"><a href="#tab5" data-toggle="tab">Form</a></li>
 		<li><a href="#tab6" data-toggle="tab">Upload CSV</a></li>
 	</ul>
-	<div class="tab-content">
+	<div class="tab-content palletContent">
 		<div class="tab-pane active fade in" id="tab5">
 			<form id="palletForm" class="inputForm" action="php/pallets.php" method="post">
 				<div class="pallets">

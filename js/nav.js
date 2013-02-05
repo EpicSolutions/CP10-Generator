@@ -9,9 +9,10 @@ $(function() {
 		$('.shelfTabs').css('display', 'none');
 		$('.palletTabs').css('display', 'none');
 		var tab = $(this).attr('class').replace('Button', '');
-		$('.' + tab + 'Tabs').css('display', 'block');
+		var tab = '.' + tab + 'Tabs';
+		$(tab).css('display', 'block');
 		
-		$('li').removeClass('active');
+		$('.nav-stacked li').removeClass('active');
 		$(this).parent().addClass('active');
 	});
 

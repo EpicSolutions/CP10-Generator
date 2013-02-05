@@ -3,7 +3,7 @@
 		<li class="active"><a href="#tab3" data-toggle="tab">Form</a></li>
 		<li><a href="#tab4" data-toggle="tab">Upload CSV</a></li>
 	</ul>
-	<div class="tab-content">
+	<div class="tab-content shelfContent">
 		<div class="tab-pane active fade in" id="tab3">
 			<form id="shelfForm" class="inputForm" action="php/shelfs.php" method="post">
 				<div class="shelfs">
