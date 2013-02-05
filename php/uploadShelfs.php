@@ -11,9 +11,9 @@ else if($file = fopen($_FILES["shelfFile"]["tmp_name"], 'r')) {
 		$line = array(
 			'manufacturer' => trim($buffer[0]),
 			'description'  => trim(ereg_replace("[^A-Za-z0-9\ ,]", "", $buffer[1])),
-			'size'         => trim($buffer[2]),
-			'upc'		   => trim($buffer[3]),
-			'price'        => trim($buffer[4]),
+			'size'         => trim($buffer[3]),
+			'upc'		   => trim($buffer[4]),
+			'price'        => trim($buffer[5]),
 		);	
 		array_push($upload, $line);
 		
