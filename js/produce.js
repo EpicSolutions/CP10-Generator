@@ -15,28 +15,28 @@ $(function(){
 	    items: 5
 	};
 	
-	$('.palletUPC').typeahead(typeahead_opt);
+	$('.produceUPC').typeahead(typeahead_opt);
 	
 	/**********************************************************************************************
 	 * Validation Initialization
 	 *********************************************************************************************/
 	// Array of validaitons
-	var palletFinalCheck = [];
+	var produceFinalCheck = [];
 	
 	// Validation class
-	function palletValidation() {
+	function produceValidation() {
 		this.upc   = false;
 		this.man   = false;
 		this.desc  = false;
 		this.size  = false;
 		this.price = false;
 		this.validCheck = function() {
-			for(var i = 0; i < palletFinalCheck.length; i++) {
+			for(var i = 0; i < produceFinalCheck.length; i++) {
 				var ready = true;
-				if(!(palletFinalCheck[i].upc && palletFinalCheck[i].man && palletFinalCheck[i].desc 
-				  && palletFinalCheck[i].size && palletFinalCheck[i].price)) {
-					$('.generatePallet').addClass('disabled');
-					$('.generatePallet').prop('disabled', true);
+				if(!(produceFinalCheck[i].upc && produceFinalCheck[i].man && produceFinalCheck[i].desc 
+				  && produceFinalCheck[i].size && produceFinalCheck[i].price)) {
+					$('.generateProduce').addClass('disabled');
+					$('.generateProduce').prop('disabled', true);
 					ready = false;
 				}
 				if(!ready) {
@@ -44,60 +44,60 @@ $(function(){
 				}
 			}
 			
-			$('.generatePallet').removeClass('disabled');
-			$('.generatePallet').prop('disabled', false);
+			$('.generateProduce').removeClass('disabled');
+			$('.generateProduce').prop('disabled', false);
 			return ready;
 		};
 	}
 	
 	// Add initial validation for initial label	
-	palletFinalCheck.push(new palletValidation());
+	produceFinalCheck.push(new produceValidation());
 		
 	// UPC (Also includes form population)
 	$('.upc').on('change', function(e) {
 		var self = $(this);
 		var value = self.val();
-		palletFinalCheck[0].upc = palletValidateUPC(self, value, 0);
-		palletFinalCheck[0].validCheck();
+		produceFinalCheck[0].upc = produceValidateUPC(self, value, 0);
+		produceFinalCheck[0].validCheck();
 	});
 	
 	// Manufacturer
 	$('.man').on('change', function(e) {
 		var self = $(this);
 		var value = self.val();
-		palletFinalCheck[0].man = palletValidateMan(self, value);
-		palletFinalCheck[0].validCheck();
+		produceFinalCheck[0].man = produceValidateMan(self, value);
+		produceFinalCheck[0].validCheck();
 	});
 	
 	// Description
 	$('.desc').on('change', function(e) {
 		var self = $(this);
 		var value = self.val();
-		palletFinalCheck[0].desc = palletValidateDesc(self, value);
-		palletFinalCheck[0].validCheck();
+		produceFinalCheck[0].desc = produceValidateDesc(self, value);
+		produceFinalCheck[0].validCheck();
 	});
 	
 	// Size
 	$('.size').on('change', function(e) {
 		var self = $(this);
 		var value = self.val();
-		palletFinalCheck[0].size = palletValidateSize(self, value);
-		palletFinalCheck[0].validCheck();
+		produceFinalCheck[0].size = produceValidateSize(self, value);
+		produceFinalCheck[0].validCheck();
 	});
 	
 	// Price
 	$('.price').on('change', function(e) {
 		var self = $(this);
 		var value = self.val();
-		palletFinalCheck[0].price = palletValidatePrice(self, value);
-		palletFinalCheck[0].validCheck();
+		produceFinalCheck[0].price = produceValidatePrice(self, value);
+		produceFinalCheck[0].validCheck();
 	});
 	
 	/**********************************************************************************************
 	 * Validation Processing
 	 *********************************************************************************************/
 	// UPC
-	function palletValidateUPC(self, value, index) {
+	function produceValidateUPC(self, value, index) {
 		if(!isNaN(value)) {
 			if(value.length < 11) {
 				self.parent().parent().addClass('error');
@@ -122,13 +122,13 @@ $(function(){
 					}
 				});
 				
-				palletFinalCheck[index].upc = true;
-				palletFinalCheck[index].man = true;
-				palletFinalCheck[index].desc = true;
-				palletFinalCheck[index].units = true;
-				palletFinalCheck[index].size = true;
-				palletFinalCheck[index].price = true;
-				palletFinalCheck[index].validCheck();
+				produceFinalCheck[index].upc = true;
+				produceFinalCheck[index].man = true;
+				produceFinalCheck[index].desc = true;
+				produceFinalCheck[index].units = true;
+				produceFinalCheck[index].size = true;
+				produceFinalCheck[index].price = true;
+				produceFinalCheck[index].validCheck();
 				
 				return true;
 			}
@@ -142,7 +142,7 @@ $(function(){
 	}
 	
 	// Manufacturer
-	function palletValidateMan(self, value) {
+	function produceValidateMan(self, value) {
 		if(value.length < 1) {
 			self.parent().parent().addClass('error');
 			var alertBox = self.parent().parent().parent().parent().find('.alertBox');
@@ -164,7 +164,7 @@ $(function(){
 	}
 	
 	// Description
-	function palletValidateDesc(self, value) {
+	function produceValidateDesc(self, value) {
 		if(value.length < 1) {
 			self.parent().parent().addClass('error');
 			var alertBox = self.parent().parent().parent().parent().find('.alertBox');
@@ -202,7 +202,7 @@ $(function(){
 	}
 	
 	// Size
-	function palletValidateSize(self, value) {
+	function produceValidateSize(self, value) {
 		if(value.length < 1) {
 			self.parent().parent().addClass('error');
 			var alertBox = self.parent().parent().parent().parent().find('.alertBox');
@@ -218,7 +218,7 @@ $(function(){
 	}
 	
 	// Units
-	function palletValidatePrice(self, value) {
+	function produceValidatePrice(self, value) {
 		if(value.length < 1) {
 			self.parent().parent().addClass('error');
 			var alertBox = self.parent().parent().parent().parent().find('.alertBox');
@@ -249,16 +249,16 @@ $(function(){
 	 * Add new labels 
 	 *********************************************************************************************/
 	var count = 1;
-	$('.addPallet').click(function(e) {
+	$('.addProduce').click(function(e) {
 		e.preventDefault();
 		
-		$('.pallets').append(
-			'<div class="pallet pallet-' + ((count % 2 == 0)? 'left' : 'right') + '">' +
+		$('.produces').append(
+			'<div class="produce produce-' + ((count % 2 == 0)? 'left' : 'right') + '">' +
 				'<div class="alertBox"></div>' + 
-				'<div class="palletForm">' +
+				'<div class="produceForm">' +
 					'<div class="control-group">' +
 						'<div class="controls">' +
-							'<input type="text" class="upc palletUPC" id="upc' + (count + 1) + '" name="upc" ' + 
+							'<input type="text" class="upc produceUPC" id="upc' + (count + 1) + '" name="upc" ' + 
 								'placeholder="UPC" data-provide="typeahead" data-items="4" autocomplete="off" />' +
 						'</div>' +
 					'</div>' +
@@ -283,7 +283,7 @@ $(function(){
 					'<div class="control-group">' +
 						'<div class="controls">' +
 							'<input type="text" class="price" id="price' + (count + 1) + 
-								'" name="price' + (count + 1) + '" placeholder="Price" />' +
+								'" name="price' + (count + 1) + '" placeholder="Price" "/>' +
 						'</div>' +
 					'</div>' +
 				'</div>' +
@@ -293,16 +293,16 @@ $(function(){
 		/******************************************************************************************
 		 * Add validation 
 		 *****************************************************************************************/
-		palletFinalCheck.push(new palletValidation());
-		palletFinalCheck[0].validCheck();
+		produceFinalCheck.push(new produceValidation());
+		produceFinalCheck[0].validCheck();
 		
 		// UPC (Also includes form population)
 		$('.upc').on('change', function(e) {
 			var self = $(this);
 			var value = self.val();
 			var index = parseInt(self.attr('id').replace(/^\D+/g, '')) - 1;
-			palletFinalCheck[index].upc = palletValidateUPC(self, value, index);
-			palletFinalCheck[index].validCheck();
+			produceFinalCheck[index].upc = produceValidateUPC(self, value, index);
+			produceFinalCheck[index].validCheck();
 		});
 		
 		// Manufacturer
@@ -310,8 +310,8 @@ $(function(){
 			var self = $(this);
 			var value = self.val();
 			var index = parseInt(self.attr('id').replace(/^\D+/g, '')) - 1;
-			palletFinalCheck[index].man = palletValidateMan(self, value);
-			palletFinalCheck[index].validCheck();
+			produceFinalCheck[index].man = produceValidateMan(self, value);
+			produceFinalCheck[index].validCheck();
 		});
 		
 		// Description
@@ -319,8 +319,8 @@ $(function(){
 			var self = $(this);
 			var value = self.val();
 			var index = parseInt(self.attr('id').replace(/^\D+/g, '')) - 1;
-			palletFinalCheck[index].desc = palletValidateDesc(self, value);
-			palletFinalCheck[index].validCheck();
+			produceFinalCheck[index].desc = produceValidateDesc(self, value);
+			produceFinalCheck[index].validCheck();
 		});
 		
 		// Units
@@ -328,8 +328,8 @@ $(function(){
 			var self = $(this);
 			var value = self.val();
 			var index = parseInt(self.attr('id').replace(/^\D+/g, '')) - 1;
-			palletFinalCheck[index].units = validateUnits(self, value);
-			palletFinalCheck[index].validCheck();
+			produceFinalCheck[index].units = validateUnits(self, value);
+			produceFinalCheck[index].validCheck();
 		});
 		
 		// Size
@@ -337,8 +337,8 @@ $(function(){
 			var self = $(this);
 			var value = self.val();
 			var index = parseInt(self.attr('id').replace(/^\D+/g, '')) - 1;
-			palletFinalCheck[index].size = palletValidateSize(self, value);
-			palletFinalCheck[index].validCheck();
+			produceFinalCheck[index].size = produceValidateSize(self, value);
+			produceFinalCheck[index].validCheck();
 		});
 		
 		// Price
@@ -346,12 +346,12 @@ $(function(){
 			var self = $(this);
 			var value = self.val();
 			var index = parseInt(self.attr('id').replace(/^\D+/g, '')) - 1;
-			palletFinalCheck[index].price = palletValidatePrice(self, value);
-			palletFinalCheck[index].validCheck();
+			produceFinalCheck[index].price = produceValidatePrice(self, value);
+			produceFinalCheck[index].validCheck();
 		});
 		
 		// Typeahead
-		$('.palletUPC').typeahead(typeahead_opt);
+		$('.produceUPC').typeahead(typeahead_opt);
 		
 		// Keyup = Change
 		$('input').on('keyup', function(e) {
@@ -366,12 +366,12 @@ $(function(){
 	/**********************************************************************************************
 	 * Process Labels
 	 *********************************************************************************************/
-	$('.generatePallet').click(function(e) {
+	$('.generateProduce').click(function(e) {
 		e.preventDefault();
 		
 		var labels = {};
 		var count = 0;
-		$('.pallets .pallet').each(function(index) {
+		$('.produces .produce').each(function(index) {
 			var label = {};
 			label.upc = $(this).find('.upc').val();
 			label.manufacturer = $(this).find('.man').val();
@@ -383,9 +383,9 @@ $(function(){
 		});
 		
 		labels = JSON.stringify(labels);
-		$('#palletForm').append('<input type="hidden" id="pallets" name="pallets" />');
-		$('#pallets').val(labels);
-		$('#palletForm').submit();
+		$('#produceForm').append('<input type="hidden" id="produces" name="produces" />');
+		$('#produces').val(labels);
+		$('#produceForm').submit();
 		
 		//$(window).load("php/labels.php", {'labels': labels});
 	});

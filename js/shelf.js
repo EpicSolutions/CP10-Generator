@@ -230,10 +230,10 @@ $(function(){
 			alertBox.html('<div class="alert alert-error">The price must be a number.</div>');
 			return false;
 		}
-		else if(value >= 100) {
+		else if(value >= 1000) {
 			self.parent().parent().addClass('error');
 			var alertBox = self.parent().parent().parent().parent().find('.alertBox');
-			alertBox.html('<div class="alert alert-error">The price must be less than $100.</div>');
+			alertBox.html('<div class="alert alert-error">The price must be less than $1000.</div>');
 			return false;
 		}
 		else {
@@ -282,7 +282,7 @@ $(function(){
 					'<div class="control-group">' +
 						'<div class="controls">' +
 							'<input type="text" class="price" id="price' + (count + 1) + 
-								'" name="price' + (count + 1) + '" />' +
+								'" name="price' + (count + 1) + '" placeholder="Price" />' +
 						'</div>' +
 					'</div>' +
 				'</div>' +

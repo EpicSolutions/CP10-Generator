@@ -111,6 +111,10 @@
 	font-size: 34px;
 }
 
+.labelForm .price::-webkit-input-placeholder {
+	padding-top: 10px;
+}
+
 .labelForm .upc {
 	top: 125px;
 	left: 85px;
@@ -186,6 +190,10 @@
 	height: 52px;
 	width: 105px;
 	font-size: 34px;
+}
+
+.shelfForm .price::-webkit-input-placeholder {
+	padding-top: 10px;
 }
 
 .shelfForm .upc {
@@ -266,10 +274,95 @@
 	font-size: 34px;
 }
 
+.palletForm .price::-webkit-input-placeholder {
+	padding-top: 10px;
+}
+
 .palletForm .upc {
 	top: 250px;
 	left: 120px;
 	width: 105px;
 	height: 12px;
 	text-align: center;
+}
+
+.produceContent {
+	width: 846px;
+}
+
+#produceForm {
+	width: 768px;
+	margin: auto;	
+}
+
+.produceTabs {
+	width: 846px;
+}
+
+.produce {
+	background-color: white !important;
+	float: left;
+	margin-top: 5px;
+	padding: 2px 4px;
+	font-weight: bold;
+	line-height: 14px;
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	white-space: nowrap;
+	vertical-align: baseline;
+}
+
+.produceForm {
+	width: 321px;
+	height: 151px;
+	background-image: url('../images/produce.png');
+	margin-top: -10px;
+}
+
+.produceForm input {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.produceForm .man {
+	top: 25px;
+	left: 18px;
+	height: 17px;
+	width: 272px;
+	font-size: 12pt;
+}
+
+.produceForm .desc {
+	top: 55px;
+	left: 18px;
+	height: 15px;
+	width: 272px;
+}
+
+.produceForm .size {
+	top: 83px;
+	left: 18px;
+	height: 10px;
+	width: 75px;
+}
+
+.produceForm .price {
+	top: 83px;
+	left: 157px;
+	height: 52px;
+	width: 132px;
+	font-size: 42px;
+	text-align: center;
+}
+
+.produceForm .price::-webkit-input-placeholder {
+	padding-top: 13px;
+}
+
+.produceForm .upc {
+	top: 113px;
+	left: 18px;
+	width: 105px;
+	height: 12px;
 }

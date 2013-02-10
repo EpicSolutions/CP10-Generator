@@ -13,6 +13,7 @@
 	<script src="js/label.js"></script>
 	<script src="js/shelf.js"></script>
 	<script src="js/pallet.js"></script>
+	<script src="js/produce.js"></script>
 	<!-- Javascript -->
 </head>
 <body>
@@ -28,12 +29,14 @@
 					<li class="active"><a href="#" class="labelButton">Labels</a></li>
 					<li><a href="#" class="shelfButton">Shelf Talkers</a></li>
 					<li><a href="#" class="palletButton">Pallet Signs</a></li>
+					<li><a href="#" class="produceButton">Produce Labels</a></li>
 				</ul>	
 			</div>
 			<div class="span10">
 				<?php require_once('components/labelTabs.php'); ?>
 				<?php require_once('components/shelfTabs.php'); ?>
 				<?php require_once('components/palletTabs.php'); ?>
+				<?php require_once('components/produceTabs.php'); ?>
 			</div>
 		</div>
 		<div class="row-fluid">

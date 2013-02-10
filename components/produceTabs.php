@@ -1,18 +1,18 @@
-<div class="palletTabs tabbable">
+<div class="produceTabs tabbable">
 	<ul class="nav nav-tabs">
-		<li class="active"><a href="#tab5" data-toggle="tab">Form</a></li>
-		<li><a href="#tab6" data-toggle="tab">Upload CSV</a></li>
+		<li class="active"><a href="#tab7" data-toggle="tab">Form</a></li>
+		<li><a href="#tab8" data-toggle="tab">Upload CSV</a></li>
 	</ul>
-	<div class="tab-content palletContent">
-		<div class="tab-pane active fade in" id="tab5">
-			<form id="palletForm" class="inputForm" action="php/pallets.php" method="post">
-				<div class="pallets">
-					<div class="pallet pallet-left">
+	<div class="tab-content produceContent">
+		<div class="tab-pane active fade in" id="tab7">
+			<form id="produceForm" class="inputForm" action="php/produces.php" method="post">
+				<div class="produces">
+					<div class="produce produce-left">
 						<div class="alertBox"></div>
-						<div class="palletForm">
+						<div class="produceForm">
 							<div class="control-group">
 								<div class="controls">
-									<input type="text" class="upc palletUPC" id="upc1" name="upc" maxlength="11" 
+									<input type="text" class="upc produceUPC" id="upc1" name="upc" maxlength="11" 
 										placeholder="UPC" data-provide="typeahead" />									
 								</div>
 							</div>
@@ -40,15 +40,15 @@
 					</div>
 				</div>
 				<div class="buttons">
-					<button class="btn btn-primary addPallet">Add Pallet Signs</button>
-					<button type="submit" disabled class="btn btn-primary generatePallet">Generate Pallet Signs</button>
+					<button class="btn btn-primary addProduce">Add Produce Labels</button>
+					<button type="submit" disabled class="btn btn-primary generateProduce">Generate Produce Labels</button>
 				</div>
 			</form>
 		</div>
-		<div class="tab-pane fade" id="tab6">
-			<form id="uploadForm" action="php/uploadPallets.php" method="post" enctype="multipart/form-data">
+		<div class="tab-pane fade" id="tab8">
+			<form id="uploadForm" action="php/uploadProduce.php" method="post" enctype="multipart/form-data">
 				<h3>Select the csv file you wish to upload.</h3>
-				<input type="file" name="palletFile" id="palletFile">
+				<input type="file" name="produceFile" id="produceFile">
 				<button type="submit" class="btn btn-primary">Upload</button>
 			</form>
 		</div>
